@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header with Background Image */
+header {
+	position: relative; /* Added for positioning child elements */
+    	background-image: url('../imgs/centaur.png'); /* Replace with the path to your image */
+ 	background-size: contain; /* Resize to fit the container */
+        background-repeat: no-repeat; /* Prevent tiling */
+        background-position: center; /* Center the image */
+        background-color: rgba(143, 143, 143, 0.5); /* Green with 80% opacity */
+        height: 240px; /* Set header height */
+        width: 100%; /* Optional width adjustment */
+        margin: 0 auto 0; /* 40px top margin, auto for horizontal centering */
+}
+
+.header-content {
+    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+    padding: 20px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+/* Add styles for the text in the bottom corner of the header */
+.header-corner-text {
+    position: absolute;
+    bottom: 5px; /* Adjust vertical position */
+    right: 5px; /* Adjust horizontal position */
+    font-size: 0.7em; /* Small font size */
+    color: black; /* Ensure it contrasts with the background */
+    padding: 0px 0px; /* Add padding for a clean look */
+    border-radius: 0px; /* Rounded edges */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #444;
+    border: none;
+    padding: 0;
+    margin: 0; /* Adjust as needed */
+}
+
+section {
+    margin-bottom: 10px;
+    background: none;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+
+#use-centaur-section {
+    display: none; /* Set to 'none' if you want it hidden by default */
+    transition: max-height 0.4s ease-out;
+    border-bottom: none; /* Remove the line specifically for this heading */
+}
+
+#prompt-centaur-section {
+    display: none; /* Set to 'none' if you want it hidden by default */
+    transition: max-height 0.4s ease-out;
+    border-bottom: none; /* Remove the line specifically for this heading */
+}
+
+#contribute-centaur-section {
+    display: none; /* Set to 'none' if you want it hidden by default */
+    transition: max-height 0.4s ease-out;
+    border-bottom: none; /* Remove the line specifically for this heading */
+}
+
+#toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.2em; /* Adjust to match heading size */
+    cursor: pointer;
+    color: #444;
+    margin-left: 0px;
+    margin-right: 10px;
+    position: relative;
+    top: -1px; /* Move upwards */
+}
+
+#toggle-button:focus {
+    outline: none;
+}
+
+#toggle-button1 {
+    background: none;
+    border: none;
+    font-size: 1.2em; /* Adjust to match heading size */
+    cursor: pointer;
+    color: #444;
+    margin-left: 0px;
+    margin-right: 10px;
+    position: relative;
+    top: -1px; /* Move upwards */
+}
+
+#toggle-button1:focus {
+    outline: none;
+}
+
+#toggle-button2 {
+    background: none;
+    border: none;
+    font-size: 1.2em; /* Adjust to match heading size */
+    cursor: pointer;
+    color: #444;
+    margin-left: 0px;
+    margin-right: 10px;
+    position: relative;
+    top: -1px; /* Move upwards */
+}
+
+#toggle-button2:focus {
+    outline: none;
+}
+

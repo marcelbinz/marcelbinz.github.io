@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centaur</title>
+    <link rel="stylesheet" href="stylesheets/centaur_styles.css">
+</head>
+<body>
+
+    <!-- Header with Background Image -->
+    <header>
+	<div class="header-corner-text">Logo credits: Milena Rmus</div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Centaur: a foundation model of human cognition</h2>
+            <p>Establishing a unified theory of cognition has been a major goal of psychology. While there have been previous attempts to instantiate such theories by building computational models, we currently do not have one model that captures the human mind in its entirety. Here we introduce Centaur, a computational model that can predict and simulate human behavior in any experiment expressible in natural language. We derived Centaur by finetuning a state-of-the-art language model on a novel, large-scale data set called Psych-101. Psych-101 reaches an unprecedented scale, covering trial-by-trial data from over 60,000 participants performing over 10,000,000 choices in 160 experiments. Centaur not only captures the behavior of held-out participants better than existing cognitive models, but also generalizes to new cover stories, structural task modifications, and entirely new domains. Furthermore, we find that the model's internal representations become more aligned with human neural activity after finetuning. Taken together, Centaur is the first real candidate for a unified model of human cognition. We anticipate that it will have a disruptive impact on the cognitive sciences, challenging the existing paradigm for developing computational models.</p>
+                 <p> Contact: <a href= "mailto: marcel.binz@helmholtz-munich.de"> 
+      Marcel Binz
+   </a>  </p>
+        </section>
+
+        <section>
+            <center>
+            <div class="objective-images">
+            <table style="border-collapse: collapse; text-align: center; width: 100%;">
+		    <tr>
+			<td> <a href="https://huggingface.co/marcelbinz/Llama-3.1-Centaur-70B-adapter" target="_blank">
+                    <img src="imgs/huggingface.png" height="150" alt="HuggingFace">
+                </a> </td>
+			<td><a href="https://arxiv.org/abs/2410.20268" target="_blank">
+                    <img src="imgs/arxiv.png" height="150" alt="arXiv">
+                </a></td>
+			<td><a href="https://github.com/marcelbinz/Llama-3.1-Centaur-70B" target="_blank">
+                    <img src="imgs/github.png" height="150" alt="GitHub">
+                </a></td>
+		    </tr>
+		    <tr>
+			<td><b>Model</b></td>
+			<td><b>Paper</b></td>
+			<td><b>Code</b></td>
+		    </tr>
+	   </table>
+            	 
+                
+                
+            </div>
+            </center>
+        </section>
+
+        <section>
+	    <h2 id="use-centaur-title" style="display: inline-flex; align-items: center;">
+		<button id="toggle-button" onclick="toggleVisibility()">+</button> I want to use Centaur. How?
+	    </h2>
+	    <ol id="use-centaur-section">
+		<li>Have access to at least one 80 GB GPU (e.g. A100)? You can run the model <a href= "https://github.com/marcelbinz/Llama-3.1-Centaur-70B/blob/main/run_minimal.py"> locally using unsloth</a>.</li>
+		<li>Have neither GPUs nor money? You can play with a smaller version on <a href= "https://colab.research.google.com/drive/1BfVE7xRQePDBHZzk_3WOQPgfGs23BTly?usp=sharing"> Google Colab's free GPUs</a>.</li>
+		<li>Have money but no GPUs? You can deploy the model via a <a href= "https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints"> dedicated Inference Endpoint</a> (more soon).</li>
+	    </ol>
+	</section>
+		
+        <script>
+	    function toggleVisibility() {
+		const section = document.getElementById('use-centaur-section');
+		const button = document.getElementById('toggle-button');
+		
+		// Toggle display of section
+		if (section.style.display === 'none') {
+		    section.style.display = 'block';
+		    button.textContent = '−'; // Change to minus symbol when expanded
+		} else {
+		    section.style.display = 'none';
+		    button.textContent = '+'; // Change to plus symbol when collapsed
+		}
+	    }
+
+	    // Set initial state as collapsed
+	    document.getElementById('use-centaur-section').style.display = 'none';
+	</script>
+	
+	<section>
+	    <h2 id="prompt-centaur-title" style="display: inline-flex; align-items: center;">
+		<button id="toggle-button1" onclick="toggleVisibility1()">+</button> I want to prompt Centaur. How?
+	    </h2>
+	    <ol id="prompt-centaur-section">
+		<li>You can find prompt examples <a href= "https://github.com/marcelbinz/Llama-3.1-Centaur-70B/blob/main/run_minimal.py"> here</a> or in the <a href= "https://arxiv.org/abs/2410.20268"> Appendix of our preprint</a>. </li>
+		<li>We did not employ a particular prompt template – just phrase everything in natural language.</li>
+		<li>Human choices are encapsulated by "<<" and ">>" tokens.</li>
+		<li>Most experiments in the training data are framed in terms of button presses. If possible, it is recommended to use that style.</li>
+	    </ol>
+	</section>
+		
+        <script>
+	    function toggleVisibility1() {
+		const section = document.getElementById('prompt-centaur-section');
+		const button = document.getElementById('toggle-button1');
+		
+		// Toggle display of section
+		if (section.style.display === 'none') {
+		    section.style.display = 'block';
+		    button.textContent = '−'; // Change to minus symbol when expanded
+		} else {
+		    section.style.display = 'none';
+		    button.textContent = '+'; // Change to plus symbol when collapsed
+		}
+	    }
+
+	    // Set initial state as collapsed
+	    document.getElementById('prompt-centaur-section').style.display = 'none';
+	</script>
+
+	<section>
+	    <h2 id="contribute-centaur-title" style="display: inline-flex; align-items: center;">
+		<button id="toggle-button2" onclick="toggleVisibility2()">+</button> I would like to contribute data. How?
+	    </h2>
+	    <ol id="contribute-centaur-section">
+		We recently launched a collaborative effort to create a new large-scale data set of human behavior in a natural language format. Please check out <a href= "https://github.com/marcelbinz/Psych-201"> Psych-201</a> if you are interested in contributing.
+	    </ol>
+	</section>
+		
+        <script>
+	    function toggleVisibility2() {
+		const section = document.getElementById('contribute-centaur-section');
+		const button = document.getElementById('toggle-button2');
+		
+		// Toggle display of section
+		if (section.style.display === 'none') {
+		    section.style.display = 'block';
+		    button.textContent = '−'; // Change to minus symbol when expanded
+		} else {
+		    section.style.display = 'none';
+		    button.textContent = '+'; // Change to plus symbol when collapsed
+		}
+	    }
+
+	    // Set initial state as collapsed
+	    document.getElementById('contribute-centaur-section').style.display = 'none';
+	</script>
+
+    </main>
+
+</body>
+</html>
+
