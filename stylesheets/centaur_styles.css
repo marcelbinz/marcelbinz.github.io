@@ -14,14 +14,14 @@ header {
  	background-size: contain; /* Resize to fit the container */
         background-repeat: no-repeat; /* Prevent tiling */
         background-position: center; /* Center the image */
-        background-color: rgba(143, 143, 143, 0.5); /* Green with 80% opacity */
-        height: 240px; /* Set header height */
+        background-color: rgba(0, 0, 0, 0.75); /* Green with 80% opacity */
+        height: 250px; /* Set header height */
         width: 100%; /* Optional width adjustment */
         margin: 0 auto 0; /* 40px top margin, auto for horizontal centering */
 }
 
 .header-content {
-    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.75); /* Adds a semi-transparent overlay */
     padding: 20px;
     display: inline-block;
     border-radius: 8px;
