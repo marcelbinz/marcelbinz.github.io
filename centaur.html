@@ -16,8 +16,8 @@
     <!-- Main Content -->
     <main>
         <section>
-            <h2>Centaur: a foundation model of human cognition</h2>
-            <p>Establishing a unified theory of cognition has been a major goal of psychology. While there have been previous attempts to instantiate such theories by building computational models, we currently do not have one model that captures the human mind in its entirety. Here we introduce Centaur, a computational model that can predict and simulate human behavior in any experiment expressible in natural language. We derived Centaur by finetuning a state-of-the-art language model on a novel, large-scale data set called Psych-101. Psych-101 reaches an unprecedented scale, covering trial-by-trial data from over 60,000 participants performing over 10,000,000 choices in 160 experiments. Centaur not only captures the behavior of held-out participants better than existing cognitive models, but also generalizes to new cover stories, structural task modifications, and entirely new domains. Furthermore, we find that the model's internal representations become more aligned with human neural activity after finetuning. Taken together, Centaur is the first real candidate for a unified model of human cognition. We anticipate that it will have a disruptive impact on the cognitive sciences, challenging the existing paradigm for developing computational models.</p>
+            <h2>A foundation model to predict and capture human cognition</h2>
+            <p>Establishing a unified theory of cognition has been a major goal of psychology. While there have been previous attempts to instantiate such theories by building computational models, we currently do not have one model that captures the human mind in its entirety. A first step in this direction is to create a model that can predict human behavior in a wide range of settings. Here we introduce Centaur, a computational model that can predict and simulate human behavior in any experiment expressible in natural language. We derived Centaur by finetuning a state-of-the-art language model on a novel, large-scale data set called Psych-101. Psych-101 reaches an unprecedented scale, covering trial-by-trial data from over 60,000 participants performing over 10,000,000 choices in 160 experiments. Centaur not only captures the behavior of held-out participants better than existing cognitive models, but also generalizes to new cover stories, structural task modifications, and entirely new domains. Furthermore, we find that the model's internal representations become more aligned with human neural activity after finetuning. Taken together, our results demonstrate that it is possible to discover computational models that capture human behavior across a wide range of domains. We believe that such models provide tremendous potential for guiding the development of cognitive theories and present a case study to demonstrate this.</p>
                  <p> Contact: <a href= "mailto: marcel.binz@helmholtz-munich.de"> 
       Marcel Binz
    </a>  </p>
@@ -31,8 +31,8 @@
 			<td> <a href="https://huggingface.co/marcelbinz/Llama-3.1-Centaur-70B-adapter" target="_blank">
                     <img src="imgs/huggingface.png" height="150" alt="HuggingFace">
                 </a> </td>
-			<td><a href="https://arxiv.org/abs/2410.20268" target="_blank">
-                    <img src="imgs/arxiv.png" height="150" alt="arXiv">
+			<td><a href="https://www.nature.com/articles/s41586-025-09215-4" target="_blank">
+                    <img src="imgs/nature.png" height="170" alt="arXiv">
                 </a></td>
 			<td><a href="https://github.com/marcelbinz/Llama-3.1-Centaur-70B" target="_blank">
                     <img src="imgs/github.png" height="150" alt="GitHub">
@@ -45,47 +45,26 @@
 		    </tr>
 	   </table>
             	 
-                
-                
             </div>
             </center>
         </section>
 
         <section>
 	    <h2 id="use-centaur-title" style="display: inline-flex; align-items: center;">
-		<button id="toggle-button" onclick="toggleVisibility()">+</button> I want to use Centaur. How?
+		How to use Centaur?
 	    </h2>
-	    <ol id="use-centaur-section">
+	    <ol>
 		<li>Have access to at least one 80 GB GPU (e.g. A100)? You can run the model <a href= "https://github.com/marcelbinz/Llama-3.1-Centaur-70B/blob/main/run_minimal.py"> locally using unsloth</a>.</li>
-		<li>Have neither GPUs nor money? You can play with a smaller version on <a href= "https://colab.research.google.com/drive/1BfVE7xRQePDBHZzk_3WOQPgfGs23BTly?usp=sharing"> Google Colab's free GPUs</a>.</li>
-		<li>Have money but no GPUs? You can deploy the model via a <a href= "https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints"> dedicated Inference Endpoint</a> (more soon).</li>
+		<li>Have neither GPUs nor money? You can explore a smaller version on <a href= "https://colab.research.google.com/drive/1BfVE7xRQePDBHZzk_3WOQPgfGs23BTly?usp=sharing"> Google Colab's free GPUs</a> or the larger model via our <a href= "https://huggingface.co/spaces/marcelbinz/Centaur"> Hugging Face Space</a>.</li>
 	    </ol>
 	</section>
 		
-        <script>
-	    function toggleVisibility() {
-		const section = document.getElementById('use-centaur-section');
-		const button = document.getElementById('toggle-button');
-		
-		// Toggle display of section
-		if (section.style.display === 'none') {
-		    section.style.display = 'block';
-		    button.textContent = '−'; // Change to minus symbol when expanded
-		} else {
-		    section.style.display = 'none';
-		    button.textContent = '+'; // Change to plus symbol when collapsed
-		}
-	    }
 
-	    // Set initial state as collapsed
-	    document.getElementById('use-centaur-section').style.display = 'none';
-	</script>
-	
 	<section>
 	    <h2 id="prompt-centaur-title" style="display: inline-flex; align-items: center;">
-		<button id="toggle-button1" onclick="toggleVisibility1()">+</button> I want to prompt Centaur. How?
+		How to prompt Centaur?
 	    </h2>
-	    <ol id="prompt-centaur-section">
+	    <ol>
 		<li>You can find prompt examples <a href= "https://github.com/marcelbinz/Llama-3.1-Centaur-70B/blob/main/run_minimal.py"> here</a> or in the <a href= "https://arxiv.org/abs/2410.20268"> Appendix of our preprint</a>. </li>
 		<li>We did not employ a particular prompt template – just phrase everything in natural language.</li>
 		<li>Human choices are encapsulated by "<<" and ">>" tokens.</li>
@@ -93,52 +72,10 @@
 	    </ol>
 	</section>
 		
-        <script>
-	    function toggleVisibility1() {
-		const section = document.getElementById('prompt-centaur-section');
-		const button = document.getElementById('toggle-button1');
-		
-		// Toggle display of section
-		if (section.style.display === 'none') {
-		    section.style.display = 'block';
-		    button.textContent = '−'; // Change to minus symbol when expanded
-		} else {
-		    section.style.display = 'none';
-		    button.textContent = '+'; // Change to plus symbol when collapsed
-		}
-	    }
+      
 
-	    // Set initial state as collapsed
-	    document.getElementById('prompt-centaur-section').style.display = 'none';
-	</script>
-
-	<section>
-	    <h2 id="contribute-centaur-title" style="display: inline-flex; align-items: center;">
-		<button id="toggle-button2" onclick="toggleVisibility2()">+</button> I would like to contribute data. How?
-	    </h2>
-	    <ol id="contribute-centaur-section">
-		We recently launched a collaborative effort to create a new large-scale data set of human behavior in a natural language format. Please check out <a href= "https://github.com/marcelbinz/Psych-201"> Psych-201</a> if you are interested in contributing.
-	    </ol>
-	</section>
-		
-        <script>
-	    function toggleVisibility2() {
-		const section = document.getElementById('contribute-centaur-section');
-		const button = document.getElementById('toggle-button2');
-		
-		// Toggle display of section
-		if (section.style.display === 'none') {
-		    section.style.display = 'block';
-		    button.textContent = '−'; // Change to minus symbol when expanded
-		} else {
-		    section.style.display = 'none';
-		    button.textContent = '+'; // Change to plus symbol when collapsed
-		}
-	    }
-
-	    // Set initial state as collapsed
-	    document.getElementById('contribute-centaur-section').style.display = 'none';
-	</script>
+	
+	
 
     </main>
 
